@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navLink {
+  font-weight: 500;
+}
+
+.navLink.isActive {
+  font-weight: 700;
+  color: #910786;
+}

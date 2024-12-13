@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navLink {
+  font-weight: 500;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: #0f621e;
+}
+
+.navLink.isActive {
+  font-weight: 700;
+  color: #6904b0;
+}
