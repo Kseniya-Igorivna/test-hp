@@ -1,9 +1,26 @@
-import style from "./HomePage.module.css";
+import DailyNorma from "../../components/DailyNorma/DailyNorma";
+import WaterRatioPanel from "../../components/WaterRatioPanel/WaterRatioPanel";
+import TodayWaterList from "../../components/TodayWaterList/TodayWaterList";
+import MonthStatsTable from "../../components/MonthStatsTable/MonthStatsTable";
+import styles from "./HomePage.module.css";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
-    <div className={style.wrapper}>
-      <p className={style.mainText}>Contacts Manager</p>
+    <div className={styles.container}>
+      <div className={styles.dailyNorma}>
+        <DailyNorma />
+      </div>
+      <div className={styles.waterRatio}>
+        <WaterRatioPanel />
+      </div>
+      <div className={styles.todayWaterList}>
+        <TodayWaterList />
+      </div>
+      <div className={styles.monthStats}>
+        <MonthStatsTable />
+      </div>
     </div>
   );
-}
+};
+
+export default HomePage;
