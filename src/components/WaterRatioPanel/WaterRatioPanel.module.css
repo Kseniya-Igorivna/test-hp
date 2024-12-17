@@ -1,0 +1,152 @@
+.imageContainer {
+  margin-bottom: 8px;
+  width: 280px;
+  height: 208px;
+}
+
+.slider {
+  width: 100%;
+  margin-bottom: 8px; 
+}
+.waterBottle {
+  width: 100%;
+  max-width: 280px; 
+  height: auto;
+  margin: 0 auto; 
+}
+.progressContainer {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.progressBar {
+  display: block;
+}
+
+.progressMarkers {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 6px;
+}
+
+.marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tick {
+  width: 2px;
+  height: 8px;
+  border: 1px solid #d7e3ff;
+  width: 8px;
+  height: 0px;
+  transform: rotate(-90deg);
+  margin-bottom: 4px;
+  margin-top: 4px;
+  margin-left: 12px;
+}
+
+.progressLabels span {
+  font-size: 12px;
+  color: #888888;
+}
+
+.addWaterBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  background-color: #407bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.addWaterBtn:hover {
+  background-color: #305bb5;
+}
+
+.icon {
+  margin-right: 10px; 
+  fill: currentColor;
+  stroke-width: 2px;
+  stroke: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .dailyNormaSection {
+    position: relative; 
+    width: 518px;
+    height: 386px;
+    margin: 0 auto;
+  }
+
+  myDailyNorma {
+    position: absolute; /* Абсолютное позиционирование на картинке */
+    top: 20%; /* Смещаем вверх на 20% от контейнера */
+    left: 10px; /* Отступ слева */
+    z-index: 2; /* Поверх SVG */
+    background-color: rgba(255, 255, 255, 0.8); /* Легкий фон */
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .imageContainer {
+    position: relative; /* Контекст для .myDailyNorma */
+    overflow: hidden; /* Чтобы SVG не выходил за пределы */
+    border-radius: 20px; /* Скругление краев */
+  }
+
+  .waterBottle {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+  }
+
+  .myDailyNorma {
+    position: absolute; 
+    top: 50%; 
+    left: -73px;
+    transform: translateY(-50%); 
+    z-index: 2;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .progressContainer {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .addWaterBtn {
+    flex-shrink: 0;
+    padding: 10px 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .progressContainer {
+    max-width: 500px;
+  }
+}

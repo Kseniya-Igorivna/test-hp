@@ -1,24 +1,20 @@
-import DailyNorma from "../../components/DailyNorma/DailyNorma";
-import WaterRatioPanel from "../../components/WaterRatioPanel/WaterRatioPanel";
-import TodayWaterList from "../../components/TodayWaterList/TodayWaterList";
-import MonthStatsTable from "../../components/MonthStatsTable/MonthStatsTable";
+import DailyNorma from "../DailyNorma/DailyNorma";
+import WaterTracker from "../WaterRatioPanel/WaterRatioPanel";
+import TodayWaterList from "../TodayWaterList/TodayWaterList";
 import styles from "./HomePage.module.css";
 
 const HomePage = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.dailyNorma}>
+    <div className={styles.homeContainer}>
+      <section className={styles.dailyNormaSection}>
         <DailyNorma />
-      </div>
-      <div className={styles.waterRatio}>
-        <WaterRatioPanel />
-      </div>
-      <div className={styles.todayWaterList}>
+      </section>
+      <section className={styles.waterTrackerSection}>
+        <WaterTracker />
+      </section>
+      <section className={styles.todayWaterListSection}>
         <TodayWaterList />
-      </div>
-      <div className={styles.monthStats}>
-        <MonthStatsTable />
-      </div>
+      </section>
     </div>
   );
 };

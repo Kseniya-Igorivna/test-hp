@@ -1,54 +1,63 @@
-.container {
-    display: grid;
-    gap: 20px;
-    padding: 16px;
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Отступы между секциями */
+  padding: 16px;
+}
+
+/* Секция DailyNorma */
+.dailyNormaSection {
+  width: 100%;
+  max-width: 400px; /* Для мобильных устройств */
+  text-align: center;
+}
+
+/* Секция WaterRatioPanel */
+.waterTrackerSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Секция TodayWaterList */
+.todayWaterListSection {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Адаптивные стили для планшетов */
+@media screen and (min-width: 768px) {
+  .homeContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .dailyNorma,
-  .waterRatio,
-  .todayWaterList,
-  .monthStats {
-    width: 100%;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  .dailyNormaSection,
+  .waterTrackerSection,
+  .todayWaterListSection {
+    width: 45%; /* Две колонки */
   }
 
-  @media (min-width: 768px) {
-    .container {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+  .dailyNormaSection {
+    text-align: left;
+  }
+}
+
+/* Адаптивные стили для десктопов */
+@media screen and (min-width: 1024px) {
+  .homeContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
   }
 
-  @media (min-width: 1200px) {
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 32px;
-    }
-  
-    .dailyNorma {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-    }
-  
-    .waterRatio {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-    }
-  
-    .todayWaterList {
-      grid-column: 1 / 3;
-      grid-row: 2 / 3;
-    }
-  
-    .monthStats {
-      grid-column: 1 / 3;
-      grid-row: 3 / 4;
-    }
+  .dailyNormaSection,
+  .waterTrackerSection,
+  .todayWaterListSection {
+    width: 30%;
+    max-width: none;
   }
+}
